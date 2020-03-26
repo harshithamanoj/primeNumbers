@@ -1,27 +1,32 @@
-import java.util.Scanner;
-public class dcoder
+import java.util.Scanner ;
+public class Program
 {
-    public static void main(String[] args) 
+    public static void main(String[] args){
+
+ 
+    System.out.println("enter interval");
+    Scanner in=new Scanner(System.in);
+    int c,i;
+    int a=in.nextInt();
+    int b=in.nextInt();
+    while (a<b)
     {
-        int n, x, count = 0, i = 0;
-        Scanner in= new Scanner(System.in);
-        System.out.print("Enter no. of elements you want in array:");
-        n = in.nextInt();
-        int a[] = new int[n];
-        System.out.println("Enter all the elements:");
-        for(i = 0; i < n; i++)
+      c=0;
+      for(i=2;i<a;i++)
+      {
+        if(a%i==0)
         {
-            a[i] = in.nextInt();
+          c=1;
+          break;
         }
-        System.out.print("Enter the element of which you want to count number of occurrences:");
-        x = in.nextInt();
-        for(i = 0; i < n; i++)
-        {
-            if(a[i] == x)
-            {
-                count++;
-            }
-        }
-        System.out.println("Number of Occurrence of the Element:"+count);
+      }
+      if(c==0)
+      {
+        System.out.println(a);
+        
+      }
+      a++;
     }
-}
+    
+   }
+ }
